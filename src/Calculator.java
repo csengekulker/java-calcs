@@ -15,13 +15,10 @@ public class Calculator {
 
     Triangle triangle = new Triangle();
 
-    boolean valid = true;
-
-    valid = triangle.isValidInput(base);
-    valid = triangle.isValidInput(height);
-
-    // if valid is still true
-    if (valid) {
+    if (
+      triangle.isValidInput(base) &&
+      triangle.isValidInput(height)
+    ) {
       triangle.base = Double.parseDouble(base);
       triangle.height = Double.parseDouble(height);
 
@@ -36,6 +33,6 @@ public class Calculator {
   }
 
   public void circle() {
-    
+
   }
 }

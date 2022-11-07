@@ -12,22 +12,15 @@ public class Triangle implements Shape {
 
   @Override
   public boolean isValidInput(String input) {
+    
+    return Validator.isValidInput(input);
 
-    String sample = "[0-9]+";
+    /*
+     * static way access
+     * 
+     * Validator.isValidInput(input);
+     */
 
-    boolean isValid = true;
-
-    if (input.matches(sample)) {
-      double doubleInput = Double.parseDouble(input);
-
-      if (doubleInput <= 0) {
-        isValid = false;
-      }
-    } else {
-      isValid = false;
-    }
-
-    return isValid;
   }
   
 }
