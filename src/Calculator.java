@@ -24,15 +24,54 @@ public class Calculator {
 
       triangle.calcArea();
 
-      System.out.println("Terület: " + triangle.area);
+      System.out.println("Háromszög terület: " + triangle.area);
     }
   }
 
   public void rectangle() {
+    Scanner scanner = new Scanner(System.in);
 
+    System.out.print("A oldal: ");
+    String side_a = scanner.nextLine();
+
+    System.out.print("B oldal: ");
+    String side_b = scanner.nextLine();
+
+    scanner.close();
+
+    Rectangle rectangle = new Rectangle();
+
+    if (
+      rectangle.isValidInput(side_a) &&
+      rectangle.isValidInput(side_b)
+    ) {
+      rectangle.side_a = Double.parseDouble(side_a);
+      rectangle.side_b = Double.parseDouble(side_b);
+
+      rectangle.calcArea();
+
+      System.out.println("Téglalap terület: " + rectangle.area);
+    }
   }
 
   public void circle() {
+    Scanner scanner = new Scanner(System.in);
 
+    System.out.print("Sugár: ");
+    String radius = scanner.nextLine();
+
+    scanner.close();
+
+    Circle circle = new Circle();
+
+    if (
+      circle.isValidInput(radius)
+    ) {
+      circle.radius = Double.parseDouble(radius);
+
+      circle.calcArea();
+
+      System.out.println("Kör terület: " + circle.area);
+    }
   }
 }
