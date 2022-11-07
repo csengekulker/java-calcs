@@ -1,5 +1,4 @@
-import main.Calculator;
-import gui.MainController;
+import gui.controllers.MainController;
 
 public class App {
   public static void main(String[] args) throws Exception {
