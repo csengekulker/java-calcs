@@ -9,6 +9,8 @@ public class MainController implements ActionListener {
 
   MainFrame mainFrame;
   Calculator calculator;
+  CalculatorFrame calc = new CalculatorFrame();
+
 
   public MainController() {
 
@@ -34,17 +36,13 @@ public class MainController implements ActionListener {
     Object source = event.getSource();
 
     if (source == mainFrame.circleButton) {
-      calculator.circle();
+      calc.display("Kör");
     } else if (source == mainFrame.rectangleButton) {
-      /*
-       * TODO: 
-       * Exception in thread
-       *  "AWT-EventQueue-0"
-       * java.util.NoSuchElementException
-       */
-      calculator.rectangle();
+      calc.display("Téglalap");
+       // TODO: get input values from GUI instead of CLI 
+       // TODO: refactor calculator methods to return results here
     } else if (source == mainFrame.triangleButton) {
-      calculator.triangle();
+      calc.display("Háromszög");
     }
   }
 }

@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class MainFrame extends JFrame {
 
+
   private JPanel mainPanel = new JPanel();
   private JPanel navPanel = new JPanel();
 
