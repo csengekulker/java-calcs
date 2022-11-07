@@ -10,6 +10,8 @@
 
 * do classes Rectangle and Circle based on Triangle
 
+* refactor calculator
+
 * extend: calculate areas using multiple formulas (let user choose)
 
 * create: CLI menu
