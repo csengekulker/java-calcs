@@ -1,11 +1,13 @@
 import main.Calculator;
+import gui.MainFrame;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    Calculator calc = new Calculator();
+    // Calculator calc = new Calculator();
 
     //calc.triangle();
     //calc.rectangle();
-    calc.circle();
+    // calc.circle();
+    new MainFrame();
   }
 }
