@@ -4,6 +4,7 @@ public class Rectangle implements Shape {
   double side_b;
   Double area;
 
+  @Override
   public void calcArea() {
 
     this.area = side_a * side_b;

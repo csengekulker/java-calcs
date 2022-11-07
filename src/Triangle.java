@@ -14,13 +14,6 @@ public class Triangle implements Shape {
   public boolean isValidInput(String input) {
     
     return Validator.isValidInput(input);
-
-    /*
-     * static way access
-     * 
-     * Validator.isValidInput(input);
-     */
-
   }
   
 }
