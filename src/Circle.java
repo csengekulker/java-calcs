@@ -8,9 +8,24 @@ public class Circle implements Shape {
     this.area = Math.pow(radius, 2) * Math.PI;
   }
 
-  public boolean isValidInput() {
+  @Override
+  public boolean isValidInput(String input) {
 
-    return false;
+    String sample = "[0-9]+";
+
+    boolean isValid = true;
+
+    if (input.matches(sample)) {
+      double doubleInput = Double.parseDouble(input);
+
+      if (doubleInput <= 0) {
+        isValid = false;
+      }
+    } else {
+      isValid = false;
+    }
+
+    return isValid;
   }
   
 }

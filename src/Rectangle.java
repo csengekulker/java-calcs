@@ -9,9 +9,24 @@ public class Rectangle implements Shape {
     this.area = side_a * side_b;
   }
 
-  public boolean isValidInput() {
+  @Override
+  public boolean isValidInput(String input) {
 
-    return false;
+    String sample = "[0-9]+";
+
+    boolean isValid = true;
+
+    if (input.matches(sample)) {
+      double doubleInput = Double.parseDouble(input);
+
+      if (doubleInput <= 0) {
+        isValid = false;
+      }
+    } else {
+      isValid = false;
+    }
+
+    return isValid;
   }
   
 }

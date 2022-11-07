@@ -1,6 +1,6 @@
 public interface Shape {
-  
+
   public void calcArea();
   // public Double getArea();
-  public boolean isValidInput();
+  public boolean isValidInput(String input);
 }
