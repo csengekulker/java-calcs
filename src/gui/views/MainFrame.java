@@ -7,10 +7,14 @@ public class MainFrame extends JFrame {
 
   private JPanel mainPanel = new JPanel();
   private JPanel navPanel = new JPanel();
+  private JPanel footPanel = new JPanel();
 
   public JButton circleButton = new JButton("Kör");
   public JButton rectangleButton = new JButton("Téglalap");
   public JButton triangleButton = new JButton("Háromszög");
+
+  public JButton exitButton = new JButton("Kilépés");
+  public JButton creditsButton = new JButton("Névjegy");
   
   public MainFrame() {
     setWindow();
@@ -28,6 +32,15 @@ public class MainFrame extends JFrame {
     navPanel.add(rectangleButton, BorderLayout.CENTER);
     navPanel.add(triangleButton, BorderLayout.WEST);
 
+    // ------------------------ //
+
+    footPanel.setLayout(new BorderLayout());
+    footPanel.setSize(400, 100);
+    footPanel.setBackground(Color.RED);
+
+    footPanel.add(exitButton, BorderLayout.EAST);
+    footPanel.add(creditsButton, BorderLayout.WEST);
+
   }
 
   private void setMainPanel() {
@@ -38,6 +51,7 @@ public class MainFrame extends JFrame {
     mainPanel.setBackground(Color.BLUE);
 
     mainPanel.add(navPanel, BorderLayout.NORTH);
+    mainPanel.add(footPanel, BorderLayout.SOUTH);
 
     this.add(mainPanel);
   }
