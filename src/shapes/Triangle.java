@@ -1,8 +1,11 @@
+package shapes;
+import main.Validator;
+
 public class Triangle implements Shape {
 
-  double base;
-  double height;
-  Double area;
+  public double base;
+  public double height;
+  public Double area;
 
   @Override
   public void calcArea() {

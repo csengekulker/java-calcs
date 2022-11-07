@@ -1,7 +1,11 @@
+package shapes;
+
+import main.Validator;
+
 public class Circle implements Shape {
 
-  double radius;
-  Double area;
+  public double radius;
+  public Double area;
 
   @Override
   public void calcArea() {

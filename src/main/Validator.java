@@ -1,3 +1,4 @@
+package main;
 public class Validator {
 
   public static boolean isValidInput(String input) {

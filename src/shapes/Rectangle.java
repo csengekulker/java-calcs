@@ -1,8 +1,12 @@
+package shapes;
+
+import main.Validator;
+
 public class Rectangle implements Shape {
 
-  double side_a;
-  double side_b;
-  Double area;
+  public double side_a;
+  public double side_b;
+  public Double area;
 
   @Override
   public void calcArea() {

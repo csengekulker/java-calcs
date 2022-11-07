@@ -1,4 +1,10 @@
+package main;
+
 import java.util.Scanner;
+
+import shapes.Circle;
+import shapes.Rectangle;
+import shapes.Triangle;
 
 public class Calculator {
   
