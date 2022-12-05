@@ -5,9 +5,13 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+import lan.bcs.InputPanel;
+
 public class CalculatorPanel extends JPanel {
   String title;
-  JPanel mainPanel;
+
+  InputPanel inputPanel = new InputPanel();
+
   public JButton submitButton = new JButton("Számítás");
   
   public CalculatorPanel(String title) {
@@ -16,7 +20,12 @@ public class CalculatorPanel extends JPanel {
   }
 
   public CalculatorPanel() {
+    setPanels();
     setMainPanel();
+  }
+
+  private void setPanels() {
+    inputPanel.setText("sugár");
   }
 
   private void setMainPanel() {
@@ -26,6 +35,7 @@ public class CalculatorPanel extends JPanel {
     this.setBackground(Color.BLUE);
 
     this.add(submitButton, BorderLayout.SOUTH);
+    this.add(inputPanel, BorderLayout.NORTH);
 
     // TODO: add a form here dynamically
 
