@@ -1,4 +1,5 @@
 package shapes;
+
 import utils.Validator;
 
 public class Triangle implements Shape {

@@ -1,13 +1,12 @@
 package controllers;
 
 import java.awt.event.ActionListener;
-
-import views.CalculatorFrame;
-
 import java.awt.event.ActionEvent;
 
+import views.CalculatorPanel;
+
 public class CalculatorController implements ActionListener {
-  CalculatorFrame calcFrame;
+  CalculatorPanel calcPanel;
   
   public CalculatorController() {
     start();
@@ -15,20 +14,16 @@ public class CalculatorController implements ActionListener {
   }
 
   private void start() {
-    calcFrame = new CalculatorFrame();
+    calcPanel = new CalculatorPanel();
   }
 
   private void addActionEvents() {
-    calcFrame.exitButton.addActionListener(this);
-
+    calcPanel.submitButton.addActionListener(this);
   }
 
   @Override
   public void actionPerformed(ActionEvent event) {
-    Object source = event.getSource();
+    // Object source = event.getSource();
 
-    if (source == calcFrame.exitButton) {
-      // TODO: close calcFrame on exitButton click
-    }
   }
 }

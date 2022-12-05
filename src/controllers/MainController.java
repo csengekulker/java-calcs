@@ -3,13 +3,13 @@ package controllers;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import views.CalculatorFrame;
+import views.CalculatorPanel;
 import views.MainFrame;
 
 public class MainController implements ActionListener {
 
   MainFrame mainFrame;
-  CalculatorFrame calcFrame;
+  CalculatorPanel calcPanel;
 
   public MainController() {
 
@@ -37,13 +37,13 @@ public class MainController implements ActionListener {
     Object source = event.getSource();
 
     if (source == mainFrame.circleButton) {
-      calcFrame = new CalculatorFrame("Kör");
+      calcPanel = new CalculatorPanel("Kör");
     } else if (source == mainFrame.rectangleButton) {
-      calcFrame = new CalculatorFrame("Téglalap");
-       // TODO: get input values from GUI instead of CLI 
+      calcPanel = new CalculatorPanel("Téglalap");
+       // TODO: implement inputpanel 
        // TODO: refactor calculator methods to return results here
     } else if (source == mainFrame.triangleButton) {
-      calcFrame = new CalculatorFrame("Háromszög");
+      calcPanel = new CalculatorPanel("Háromszög");
     }
 
     // ----------------------//

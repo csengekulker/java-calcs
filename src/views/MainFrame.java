@@ -6,6 +6,9 @@ import java.awt.*;
 public class MainFrame extends JFrame {
 
   private JPanel mainPanel = new JPanel();
+
+  public CalculatorPanel calculatorPanel = new CalculatorPanel();
+
   private JPanel navPanel = new JPanel();
   private JPanel footPanel = new JPanel();
 
@@ -24,13 +27,13 @@ public class MainFrame extends JFrame {
   }
 
   private void setPanels() {
-    navPanel.setLayout(new BorderLayout());
+    navPanel.setLayout(new FlowLayout());
     navPanel.setSize(400, 100);
     navPanel.setBackground(Color.RED);
 
-    navPanel.add(circleButton, BorderLayout.EAST);
-    navPanel.add(rectangleButton, BorderLayout.CENTER);
-    navPanel.add(triangleButton, BorderLayout.WEST);
+    navPanel.add(circleButton);
+    navPanel.add(rectangleButton);
+    navPanel.add(triangleButton);
 
     // ------------------------ //
 
@@ -45,12 +48,12 @@ public class MainFrame extends JFrame {
 
   private void setMainPanel() {
 
-    BorderLayout bl = new BorderLayout();
-    mainPanel.setLayout(bl);
+    mainPanel.setLayout(new BorderLayout());
 
     mainPanel.setBackground(Color.BLUE);
 
     mainPanel.add(navPanel, BorderLayout.NORTH);
+    mainPanel.add(calculatorPanel, BorderLayout.CENTER);
     mainPanel.add(footPanel, BorderLayout.SOUTH);
 
     this.add(mainPanel);
