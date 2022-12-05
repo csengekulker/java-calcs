@@ -37,13 +37,12 @@ public class MainController implements ActionListener {
     Object source = event.getSource();
 
     if (source == mainFrame.circleButton) {
-      calcPanel = new CalculatorPanel("Kör");
+      System.out.println("render circle form");
     } else if (source == mainFrame.rectangleButton) {
-      calcPanel = new CalculatorPanel("Téglalap");
-       // TODO: implement inputpanel 
-       // TODO: refactor calculator methods to return results here
+      System.out.println("render rect form");
+       // TODO: calculator methods return results here
     } else if (source == mainFrame.triangleButton) {
-      calcPanel = new CalculatorPanel("Háromszög");
+      System.out.println("render triangle form");
     }
 
     // ----------------------//
@@ -51,7 +50,7 @@ public class MainController implements ActionListener {
     if (source == mainFrame.exitButton) {
       System.exit(0);
     } else if (source == mainFrame.creditsButton) {
-      // TODO: credits in own window
+      // TODO: credits in own window (JFrame)
     }
   }
 }
