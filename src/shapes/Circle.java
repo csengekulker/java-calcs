@@ -1,8 +1,10 @@
 package shapes;
 
-import main.Validator;
+import utils.Validator;
 
 public class Circle implements Shape {
+
+  // TODO: manage visibility (public for now)
 
   public double radius;
   public Double area;

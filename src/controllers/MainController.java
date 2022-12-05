@@ -1,10 +1,10 @@
-package gui.controllers;
+package controllers;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import gui.views.CalculatorFrame;
-import gui.views.MainFrame;
+import views.CalculatorFrame;
+import views.MainFrame;
 
 public class MainController implements ActionListener {
 

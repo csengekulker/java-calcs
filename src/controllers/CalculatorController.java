@@ -1,8 +1,8 @@
-package gui.controllers;
+package controllers;
 
 import java.awt.event.ActionListener;
 
-import gui.views.CalculatorFrame;
+import views.CalculatorFrame;
 
 import java.awt.event.ActionEvent;
 

@@ -1,7 +1,9 @@
 package shapes;
-import main.Validator;
+import utils.Validator;
 
 public class Triangle implements Shape {
+
+  // TODO: manage visibility (public for now)
 
   public double base;
   public double height;

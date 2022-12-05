@@ -1,4 +1,4 @@
-package gui.views.forms;
+package views.forms;
 
 public interface Form {
   /*

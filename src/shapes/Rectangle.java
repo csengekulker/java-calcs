@@ -1,8 +1,10 @@
 package shapes;
 
-import main.Validator;
+import utils.Validator;
 
 public class Rectangle implements Shape {
+
+  // TODO: manage visibility (public for now)
 
   public double side_a;
   public double side_b;

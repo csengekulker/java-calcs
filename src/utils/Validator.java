@@ -1,4 +1,4 @@
-package main;
+package utils;
 public class Validator {
 
   public static boolean isValidInput(String input) {

@@ -1,4 +1,4 @@
-import gui.controllers.MainController;
+import controllers.MainController;
 
 public class App {
   public static void main(String[] args) throws Exception {
