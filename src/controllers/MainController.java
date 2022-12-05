@@ -2,6 +2,7 @@ package controllers;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
 
 import views.CalculatorPanel;
 import views.MainFrame;
@@ -9,7 +10,8 @@ import views.MainFrame;
 public class MainController implements ActionListener {
 
   MainFrame mainFrame;
-  CalculatorPanel calcPanel;
+  CalculatorPanel calcPanel = new CalculatorPanel();
+  JPanel circlePanel = calcPanel.setCirclePanel();
 
   public MainController() {
 
@@ -38,11 +40,10 @@ public class MainController implements ActionListener {
 
     if (source == mainFrame.circleButton) {
       System.out.println("render circle form");
-    } else if (source == mainFrame.rectangleButton) {
-      System.out.println("render rect form");
-       // TODO: calculator methods return results here
-    } else if (source == mainFrame.triangleButton) {
-      System.out.println("render triangle form");
+      calcPanel.setSelectedPanel(circlePanel);
+      // calcPanel.add(new JLabel("Kör"));
+      mainFrame.validate();
+
     }
 
     // ----------------------//
@@ -51,6 +52,7 @@ public class MainController implements ActionListener {
       System.exit(0);
     } else if (source == mainFrame.creditsButton) {
       // TODO: credits in own window (JFrame)
+      System.out.println("Balogh Csenge 2022.12.05");
     }
   }
 }

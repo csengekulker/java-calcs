@@ -1,8 +1,8 @@
 package views;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -10,8 +10,6 @@ import java.awt.Color;
 import lan.bcs.InputPanel;
 
 public class CalculatorPanel extends JPanel {
-
-  // TODO: different panels for different shapes
 
   public JPanel circlePanel;
   public InputPanel radiusInput;
@@ -27,8 +25,8 @@ public class CalculatorPanel extends JPanel {
   public JButton submitButton = new JButton("számít");
 
   public CalculatorPanel() {
+    System.out.println("CALCPANEL CONSTRUCTING");
     setPanels();
-    setMainPanel();
   }
 
   private void setPanels() {
@@ -38,7 +36,7 @@ public class CalculatorPanel extends JPanel {
     
   }
 
-  private JPanel setCirclePanel() {
+  public JPanel setCirclePanel() {
     circlePanel = new JPanel();
     radiusInput = new InputPanel();
     radiusInput.setText("Sugár:");
@@ -83,17 +81,15 @@ public class CalculatorPanel extends JPanel {
     return trianglePanel;
   }
 
-  private void setMainPanel() {
+  public void setSelectedPanel(JPanel selectedPanel) {
 
     this.setSize(200, 200);
     this.setLayout(new BorderLayout());
     this.setBackground(Color.BLUE);
 
     // TODO: add shapePanel on buttonclick --> controller
-    this.add(trianglePanel, BorderLayout.NORTH);
-    // this.add(circlePanel);
-    // this.add(trianglePanel);
-    // always add submitbutton
+    System.out.println("fut  a setmainpanel");
+    this.add(selectedPanel, BorderLayout.CENTER);
     this.add(submitButton, BorderLayout.SOUTH);
 
   }
